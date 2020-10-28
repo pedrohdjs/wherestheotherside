@@ -1,5 +1,5 @@
 <?php
 
-const IPINFO_ACCESS_TOKEN = "---------";
+const OPENCAGE_API_TOKEN = "------------------";
 
 ?>
