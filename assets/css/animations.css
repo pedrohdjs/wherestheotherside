@@ -1,4 +1,4 @@
-@keyframes fadeleft {
+@keyframes fadetoleft {
     0% {
         position: relative;
         right: 10%;
@@ -16,4 +16,23 @@
         right: 500%; /*Prevent the element from glitching back in. In Brazil, this is known as a "Gambiarra" */
         width: fit-content;
     }
+}
+
+@keyframes fadefromleft {
+    from {
+        position: relative;
+        right: 130%;
+        width: fit-content;
+    }
+    
+    to {
+        position: relative;
+        right: 0%;
+        width: fit-content;
+    }
+
+}
+
+.fade-in {
+    animation-name: fadefromleft;
 }

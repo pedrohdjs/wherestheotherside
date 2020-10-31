@@ -1,13 +1,13 @@
 <?php
 
-$lattitude = $_GET['lattitude'];
+$latitude = $_GET['latitude'];
 $longitude = $_GET['longitude'];
 
-$inverseLattitude = -$lattitude;
-$inverseLongitude = 180 - abs($longitude);
+$inverseLatitude = -$latitude;
+$inverseLongitude = ($longitude>0) ? -(180 - abs($longitude)) : (180 - abs($longitude));
 
 $response = [
-    'lattitude' => $inverseLattitude,
+    'latitude' => $inverseLatitude,
     'longitude' => $inverseLongitude
 ];
 
