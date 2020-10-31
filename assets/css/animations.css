@@ -1,0 +1,19 @@
+@keyframes fadeleft {
+    0% {
+        position: relative;
+        right: 10%;
+        width: fit-content;
+    }
+    
+    98% {
+        position: relative;
+        right: 130%;
+        width: fit-content;
+    }
+
+    100% {
+        position: relative;
+        right: 500%; /*Prevent the element from glitching back in. In Brazil, this is known as a "Gambiarra" */
+        width: fit-content;
+    }
+}
