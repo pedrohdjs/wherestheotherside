@@ -9,7 +9,6 @@
     <script type="text/javascript" src=".\src\js\bootstrap.min.js"></script>
     <script type="text/javascript" src=".\src\js\animations.js"></script>
     <script type="text/javascript" src=".\src\js\scripts.js"></script>
-
 </head>
 <body>
 <section class="card fill">
