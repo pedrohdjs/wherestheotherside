@@ -2,8 +2,8 @@
 require_once(dirname(__DIR__)."/../src/php/config/config.php");
 
 
-$latitude = $_GET['latitude']; // -22.951944; 
-$longitude = $_GET['longitude']; // -46.541944;
+$latitude = floatval($_GET['latitude']);
+$longitude = floatval($_GET['longitude']);
 
 $queryURL = "https://api.opencagedata.com/geocode/v1/json?". "key=" . OPENCAGE_API_TOKEN . "&q=". $latitude . urlencode(",") . $longitude . "&language=en&pretty=1";
 $queryRes = file_get_contents($queryURL);
@@ -18,9 +18,9 @@ if($category === "natural/water"){
 }
 
 else{
-    $city = $queryRes->results[0]->components->city;
-    $state = $queryRes->results[0]->components->state;
-    $country = $queryRes->results[0]->components->country;
+    $city = $queryRes->results[0]->components->city ?? 'Some city';
+    $state = $queryRes->results[0]->components->state ?? 'some state';
+    $country = $queryRes->results[0]->components->country ?? 'some country';
     
     $response = [
         'isWater' => false,

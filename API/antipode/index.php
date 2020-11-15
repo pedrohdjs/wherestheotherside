@@ -1,7 +1,7 @@
 <?php
 
-$latitude = $_GET['latitude'];
-$longitude = $_GET['longitude'];
+$latitude = floatval($_GET['latitude']);
+$longitude = floatval($_GET['longitude']);
 
 $inverseLatitude = -$latitude;
 $inverseLongitude = ($longitude>0) ? -(180 - abs($longitude)) : (180 - abs($longitude));

@@ -9,6 +9,11 @@
     <script type="text/javascript" src=".\src\js\bootstrap.min.js"></script>
     <script type="text/javascript" src=".\src\js\animations.js"></script>
     <script type="text/javascript" src=".\src\js\scripts.js"></script>
+    <script type="text/javascript">
+        if (location.protocol !== 'https:') {
+            location.replace('https:' + location.href.substring(location.protocol.length));
+        }
+    </script>
 </head>
 <body>
 <section class="card fill">

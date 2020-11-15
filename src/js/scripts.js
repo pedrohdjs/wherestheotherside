@@ -13,8 +13,8 @@ async function positionHandler(position) {
     await fadeToLeft(document.getElementById("welcome-message"),500);
 
     const coords = {
-        "latitude": position.coords.latitude,
-        "longitude": position.coords.longitude
+        "latitude": position.coords.latitude.toFixed(4),
+        "longitude": position.coords.longitude.toFixed(4)
     };
     const coordinatesString = `Apparently, your approximate coordinates are ${coords.latitude}, ${coords.longitude}`;
     await addH3fadeIn(content,coordinatesString,1500);
